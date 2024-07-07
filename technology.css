@@ -1,0 +1,593 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+:root {
+    --belle-font: "Bellefair", serif;
+    --barlow-font: "Barlow Condensed", sans-serif;
+    --vary-dark-navy: #0B0D17;
+    --light-blue: #D0D6F9;
+    --white: #ffffff;
+}
+
+::-webkit-scrollbar {
+    width: 0.1px;
+    background-color: transparent;
+}
+
+body {
+    height: 100%;
+    background: url(assets/technology/background-technology-desktop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+header {
+    padding: 20px 0 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    width: 40px;
+}
+
+header .nav-line {
+    width: 50%;
+    height: 1px;
+    background-color: var(--white);
+    transform: translateX(20%);
+    z-index: 100;
+}
+
+header nav {
+    width: 40%;
+    padding: 24px;
+    background-color: #ffffff38;
+    backdrop-filter: blur(3px);
+    display: flex;
+    justify-content: flex-end;
+}
+
+#menu-btn {
+    display: none;
+}
+
+header nav ul {
+    z-index: 100;
+    display: flex;
+}
+
+header nav ul li a {
+    height: 100%;
+    display: flex;
+    color: var(--white);
+    font-family: var(--barlow-font);
+    font-size: 19px;
+    padding: 0 15px 0 0;
+    transition: .20s;
+}
+
+header nav ul li a:hover {
+    color: rgb(186, 196, 255);
+}
+
+#second-nav {
+    display: none;
+}
+
+/* Technology Section */
+
+.technology {
+    display: flex;
+    padding: 50px 0 50px 50px;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.technology .web-name {
+    padding: 0 40px;
+    display: flex;
+    gap: 9px;
+}
+
+.technology .web-name a {
+    color: #535353;
+    font-family: var(--barlow-font);
+    font-weight: 600;
+    font-size: 26px;
+    letter-spacing: 4px;
+}
+
+.technology .web-name p {
+    color: #ffffff;
+    font-family: var(--barlow-font);
+    font-weight: 300;
+    font-size: 26px;
+    text-transform: uppercase;
+    word-spacing: 5px;
+    letter-spacing: 3px;
+}
+
+.technology .main-tech-content {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+}
+
+.technology .main-tech-content .tech-content {
+    padding: 0 50px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.technology .tech-content .pagi {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.technology .tech-content .pagi a {
+    height: 50px;
+    width: 50px;
+    background-color: #ffffff00;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 50%;
+    font-family: var(--belle-font);
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.technology .tech-content .pagi a.pagi-active {
+    background-color: #fff;
+    color: #000000;
+}
+
+.technology .main-tech-content .tech-content .text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.technology .main-tech-content .tech-content .text-content a {
+    color: #5e5e5e;
+    font-family: var(--belle-font);
+    font-size: 24px;
+}
+
+.technology .main-tech-content .tech-content .text-content h2 {
+    color: #fff;
+    font-family: var(--belle-font);
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 42px;
+}
+
+.technology .main-tech-content .tech-content .text-content p {
+    width: 450px;
+    color: #fff;
+    font-family: var(--barlow-font);
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    line-height: 25px;
+}
+
+.technology .main-tech-content .tech-picture {
+    height: 400px;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.technology .main-tech-content .tech-picture .picture-div {
+    height: 100%;
+    width: 50%;
+    background: url(assets/technology/image-launch-vehicle-portrait.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@media (max-width: 1200px) {
+    .technology .main-tech-content .tech-content {
+        padding: 0;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 1150px) {
+    .technology .tech-content .pagi a {
+        height: 50px;
+        width: 50px;
+        background-color: #ffffff00;
+        border: 1px solid #fff;
+        color: #fff;
+        border-radius: 50%;
+        font-family: var(--belle-font);
+        font-size: 20px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .technology .main-tech-content .tech-content .text-content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .technology .main-tech-content .tech-content .text-content a {
+        color: #5e5e5e;
+        font-family: var(--belle-font);
+        font-size: 20px;
+    }
+
+    .technology .main-tech-content .tech-content .text-content h2 {
+        color: #fff;
+        font-family: var(--belle-font);
+        font-weight: 300;
+        text-transform: uppercase;
+        font-size: 34px;
+    }
+
+    .technology .main-tech-content .tech-content .text-content p {
+        width: 90%;
+        color: #fff;
+        font-family: var(--barlow-font);
+        font-weight: 300;
+        text-transform: uppercase;
+        font-size: 14px;
+        letter-spacing: 1.5px;
+        line-height: 25px;
+    }
+
+    .technology .main-tech-content .tech-picture {
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .technology .main-tech-content .tech-picture img {
+        height: 100%;
+    }
+}
+
+@media (max-width: 1330px) {
+    header .nav-line {
+        width: 40%
+    }
+
+    header nav {
+        width: 60%;
+    }
+}
+
+@media (max-width: 980px) {
+    .technology {
+        padding: 0 0 80px 0;
+    }
+
+    .technology .main-tech-content {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .technology .main-tech-content .tech-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .technology .tech-content .pagi {
+        height: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .technology .tech-content .pagi a {
+        width: 50px;
+        display: flex;
+    }
+
+    .technology .main-tech-content .tech-content .text-content p {
+        width: 100%;
+    }
+
+    .technology .main-tech-content .tech-picture {
+        width: 100%;
+        height: 400px;
+        display: flex;
+        justify-content: flex-end;
+        background-size: cover;
+    }
+
+    .technology .main-tech-content .tech-picture .picture-div {
+        height: 100%;
+        width: 100%;
+        background: url(assets/technology/image-launch-vehicle-landscape.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+@media (max-width: 911px) {
+    body {
+        background-position: center;
+        height: 100%;
+    }
+
+    header .nav-line {
+        width: 30%
+    }
+
+    header nav {
+        width: 60%;
+    }
+}
+
+@media (max-width: 800px) {
+    .technology .web-name {
+        padding: 40px 40px 40px 40px;
+    }
+}
+
+@media (max-width: 782px) {
+    body {
+        background: url(assets/technology/background-technology-tablet.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    header {
+        padding: 0 0 40px 0;
+    }
+
+    header .logo {
+        width: 15%;
+        display: flex;
+        justify-content: center;
+    }
+
+    header .logo img {
+        margin: 15px 20px 0 20px;
+        width: 40px;
+    }
+
+    header .nav-line {
+        display: none;
+    }
+
+    header nav {
+        padding: 0 20px 0 0;
+        background-color: #ffffff21;
+        height: 86px;
+        width: 85%;
+        display: flex;
+        align-items: center;
+    }
+
+    .technology .web-name {
+        padding: 40px 40px 40px 40px;
+    }
+}
+
+@media (max-width: 650px) {
+    .technology .tech-content .pagi {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .technology .tech-content .pagi a {
+        height: 50px;
+        width: 50px;
+        background-color: #ffffff00;
+        border: 1px solid #fff;
+        color: #fff;
+        border-radius: 50%;
+        font-family: var(--belle-font);
+        font-size: 20px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .technology .tech-content .pagi a.pagi-active {
+        background-color: #fff;
+        color: #000000;
+    }
+
+    .technology .main-tech-content .tech-content .text-content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .technology .main-tech-content .tech-content .text-content a {
+        color: #5e5e5e;
+        font-family: var(--belle-font);
+        font-size: 20px;
+    }
+
+    .technology .main-tech-content .tech-content .text-content h2 {
+        color: #fff;
+        font-family: var(--belle-font);
+        font-weight: 300;
+        text-transform: uppercase;
+        font-size: 30px;
+    }
+
+    .technology .main-tech-content .tech-content .text-content p {
+        width: 380px;
+        color: #fff;
+        font-family: var(--barlow-font);
+        font-weight: 300;
+        text-transform: uppercase;
+        font-size: 14px;
+        letter-spacing: 1.5px;
+        line-height: 25px;
+    }
+}
+
+@media (max-width: 520px) {
+    body {
+        height: 100%;
+    }
+
+    header {
+        padding: 0 18px;
+    }
+
+    header nav {
+        padding: 0;
+        background-color: #ffffff00;
+        backdrop-filter: blur(0px);
+    }
+
+    header .logo {
+        width: 40px;
+        display: flex;
+        justify-content: center;
+    }
+
+    header .logo img {
+        margin: 0;
+        width: 40px;
+    }
+
+    header nav ul {
+        display: none;
+    }
+
+    #menu-btn {
+        display: flex;
+    }
+
+    .navCloseBtnUpper {
+        padding: 0 20px 0 0;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    #close-btn {
+        width: 20px;
+        display: flex;
+        padding: 30px 0 0 0;
+    }
+
+    #second-nav {
+        margin: 0 0;
+        top: 0;
+        right: 0;
+        position: fixed;
+        height: 100vh;
+        width: 70%;
+        background-color: #ffffff49;
+        backdrop-filter: blur(20px);
+        animation: openNavAnimation .50s;
+    }
+
+    #second-nav .nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    @keyframes openNavAnimation {
+        0% {
+            width: 35%;
+        }
+
+        100% {
+            width: 70%;
+        }
+    }
+
+    #second-nav .nav ul {
+        padding: 70px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        z-index: 100;
+    }
+
+    #second-nav .nav ul li {
+        padding: 20px 0 0 40px;
+        display: flex;
+    }
+
+    #second-nav .nav ul li a {
+        width: 100%;
+        color: var(--white);
+        font-family: var(--barlow-font);
+        font-size: 19px;
+        padding: 0 15px 0 0;
+    }
+
+    #second-nav .nav ul li a.active {
+        border-right: 4px solid #ffffff;
+    }
+
+    .technology .web-name {
+        padding: 40px 0 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 430px) {
+
+    .technology .main-tech-content .tech-content {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .technology .main-tech-content .tech-content .text-content {
+        display: flex;
+        align-items: center;
+    }
+
+    .technology .main-tech-content .tech-content .text-content p {
+        width: 80%;
+        text-align: center;
+    }
+
+    .technology .main-tech-content .tech-picture .picture-div {
+        height: 100%;
+        width: 100%;
+        background: url(assets/technology/image-launch-vehicle-portrait.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+}

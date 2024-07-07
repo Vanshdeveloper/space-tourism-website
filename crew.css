@@ -1,0 +1,502 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+:root {
+    --belle-font: "Bellefair", serif;
+    --barlow-font: "Barlow Condensed", sans-serif;
+    --vary-dark-navy: #0B0D17;
+    --light-blue: #D0D6F9;
+    --white: #ffffff;
+}
+
+::-webkit-scrollbar {
+    width: 0.1px;
+    background-color: transparent;
+}
+
+body {
+    height: 100%;
+    background: url(assets/crew/background-crew-desktop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+header {
+    padding: 20px 0 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    width: 40px;
+}
+
+header .nav-line {
+    width: 50%;
+    height: 1px;
+    background-color: var(--white);
+    transform: translateX(20%);
+    z-index: 100;
+}
+
+header nav {
+    width: 40%;
+    padding: 24px;
+    background-color: #ffffff38;
+    backdrop-filter: blur(3px);
+    display: flex;
+    justify-content: flex-end;
+}
+
+#menu-btn {
+    display: none;
+}
+
+header nav ul {
+    z-index: 100;
+    display: flex;
+}
+
+header nav ul li a {
+    height: 100%;
+    display: flex;
+    color: var(--white);
+    font-family: var(--barlow-font);
+    font-size: 19px;
+    padding: 0 15px 0 0;
+    transition: .20s;
+}
+
+header nav ul li a:hover {
+    color: rgb(186, 196, 255);
+}
+
+#second-nav {
+    display: none;
+}
+
+/* Crew Section */
+
+.crew {
+    padding: 100px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.crew .crew-content {
+    width: 50%;
+    padding: 70px 0 100px 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+}
+
+.crew .crew-content .web-name {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.crew .crew-content .web-name a {
+    color: #535353;
+    font-family: var(--barlow-font);
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 4px;
+}
+
+.crew .crew-content .web-name p {
+    color: #ffffff;
+    font-family: var(--barlow-font);
+    font-weight: 300;
+    font-size: 26px;
+    text-transform: uppercase;
+    word-spacing: 5px;
+    letter-spacing: 3px;
+}
+
+.crew .crew-content .about-crew {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.crew .crew-content .about-crew h2 {
+    font-family: var(--belle-font);
+    font-size: 27px;
+    color: #757575;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.crew .crew-content .about-crew a {
+    font-family: var(--belle-font);
+    font-size: 50px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.crew .crew-content .about-crew p {
+    width: 502px;
+    color: var(--light-blue);
+    font-family: var(--barlow-font);
+    font-size: 16px;
+}
+ 
+.crew .crew-content .pagination-dots {
+    display: flex;
+    gap: 20px;
+}
+
+.crew .crew-content .pagination-dots a {
+    height: 13px;
+    width: 13px;
+    background-color: #ffffff33;
+    border-radius: 50%;
+}
+
+.crew .crew-content .pagination-dots a.active {
+    background-color: #fff;
+}
+
+.crew .crew-image {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.crew .crew-image img {
+    width: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+@media (max-width: 1110px) {
+    .crew .crew-content .about-crew h2 {
+        font-family: var(--belle-font);
+        font-size: 20px;
+        color: #757575;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+    
+    .crew .crew-content .about-crew a {
+        font-family: var(--belle-font);
+        font-size: 30px;
+        color: #ffffff;
+        text-transform: uppercase;
+    }
+    
+    .crew .crew-content .about-crew p {
+        width: 100%;
+        color: var(--light-blue);
+        font-family: var(--barlow-font);
+        font-size: 16px;
+    }
+
+    .crew .crew-image {
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+}
+
+@media (max-width: 800px) {
+    .web-name {
+        justify-content: center;
+    }
+
+    .crew {
+        padding-bottom: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 100px;
+    }
+
+    .crew .crew-content {
+        width: 100%;
+        padding: 0;
+        align-items: center;
+    }
+
+    .crew .crew-content .pagination-dots {
+        justify-content: center;
+    }
+
+    .crew .crew-image {
+        /* height: 600px; */
+        width: 500px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+}
+
+@media (max-width: 1330px) {
+    header .nav-line {
+        width: 40%
+    }
+
+    header nav {
+        width: 60%;
+    }
+}
+
+@media (max-width: 911px) {
+    body {
+        background-position: center;
+        height: 100%;
+    }
+
+    header .nav-line {
+        width: 30%
+    }
+
+    header nav {
+        width: 60%;
+    }
+}
+
+@media (max-width: 801px) {
+    .crew .crew-content .about-crew {
+        align-items: center;
+    }
+
+    .crew .crew-content .about-crew p {
+        width: 80%;
+        color: var(--light-blue);
+        font-family: var(--barlow-font);
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 782px) {
+    body {
+        background: url(assets/crew/background-crew-tablet.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    header {
+        padding: 0;
+    }
+
+    header .logo {
+        width: 15%;
+        display: flex;
+        justify-content: center;
+    }
+
+    header .logo img {
+        margin: 15px 20px 0 20px;
+        width: 40px;
+    }
+
+    header .nav-line {
+        display: none;
+    }
+
+    header nav {
+        padding: 0 20px 0 0;
+        background-color: #ffffff21;
+        height: 86px;
+        width: 85%;
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (max-width: 700px) {
+    .crew .crew-image img {
+        width: 300px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+
+    .crew .crew-content {
+        gap: 50px;
+    }
+}
+
+@media (max-width: 520px) {
+    body {
+        height: 100%;
+    }
+
+    header {
+        padding: 0 18px;
+    }
+
+    header nav {
+        padding: 0;
+        background-color: #ffffff00;
+        backdrop-filter: blur(0px);
+    }
+
+    header .logo {
+        width: 40px;
+        display: flex;
+        justify-content: center;
+    }
+
+    header .logo img {
+        margin: 0;
+        width: 40px;
+    }
+
+    header nav ul {
+        display: none;
+    }
+
+    #menu-btn {
+        display: flex;
+    }
+
+    .navCloseBtnUpper {
+        padding: 0 20px 0 0;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    #close-btn {
+        width: 20px;
+        display: flex;
+        padding: 30px 0 0 0;
+    }
+
+    #second-nav {
+        margin: 0 0;
+        top: 0;
+        right: 0;
+        position: fixed;
+        height: 100vh;
+        width: 70%;
+        background-color: #ffffff49;
+        backdrop-filter: blur(20px);
+        animation: openNavAnimation .50s;
+    }
+
+    #second-nav .nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    @keyframes openNavAnimation {
+        0% {
+            width: 35%;
+        }
+
+        100% {
+            width: 70%;
+        }
+    }
+
+    #second-nav .nav ul {
+        padding: 70px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        z-index: 100;
+    }
+
+    #second-nav .nav ul li {
+        padding: 20px 0 0 40px;
+        display: flex;
+    }
+
+    #second-nav .nav ul li a {
+        width: 100%;
+        color: var(--white);
+        font-family: var(--barlow-font);
+        font-size: 19px;
+        padding: 0 15px 0 0;
+    }
+
+    #second-nav .nav ul li a.active {
+        border-right: 4px solid #ffffff;
+    }
+
+    .crew {
+        gap: 20px;
+    }
+
+    .crew .crew-content .web-name a {
+        color: #535353;
+        font-family: var(--barlow-font);
+        font-weight: 600;
+        font-size: 22px;
+        letter-spacing: 2px;
+    }
+    
+    .crew .crew-content .web-name p {
+        color: #ffffff;
+        font-family: var(--barlow-font);
+        font-weight: 300;
+        font-size: 22px;
+        text-transform: uppercase;
+        word-spacing: 3px;
+        letter-spacing: 1px;
+    }
+
+    .crew .crew-content .about-crew h2 {
+        font-family: var(--belle-font);
+        font-size: 20px;
+        color: #757575;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+    
+    .crew .crew-content .about-crew a {
+        font-family: var(--belle-font);
+        font-size: 24px;
+        color: #ffffff;
+        text-transform: uppercase;
+    }
+    
+    .crew .crew-content .about-crew p {
+        width:  300px;
+        color: var(--light-blue);
+        font-family: var(--barlow-font);
+        font-size: 16px;
+    }
+
+    .crew .crew-image {
+        width: 240px;
+    }
+}
+
+@media (max-width: 300px) {
+    .crew .crew-image img {
+        width: 200px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+}
+
+@media (max-width: 350px) {
+    .crew .crew-content .about-crew {
+        align-items: center;
+    }
+
+    .crew .crew-content .about-crew p {
+        width:  80%;
+        color: var(--light-blue);
+        font-family: var(--barlow-font);
+        font-size: 16px;
+    }
+}
